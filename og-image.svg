@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+      <feBlend in="SourceGraphic" mode="multiply" result="blend" />
+      <feComposite in="blend" in2="SourceGraphic" operator="in" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#F7F3E3" />
+
+  <!-- Decorative wave lines (forest green) -->
+  <g stroke="#307351" stroke-width="1.2" fill="none" opacity="0.25">
+    <path d="M0,180 Q150,155 300,180 Q450,205 600,180 Q750,155 900,180 Q1050,205 1200,180" />
+    <path d="M0,210 Q150,185 300,210 Q450,235 600,210 Q750,185 900,210 Q1050,235 1200,210" />
+    <path d="M0,240 Q150,215 300,240 Q450,265 600,240 Q750,215 900,240 Q1050,265 1200,240" />
+    <path d="M0,390 Q150,365 300,390 Q450,415 600,390 Q750,365 900,390 Q1050,415 1200,390" />
+    <path d="M0,420 Q150,395 300,420 Q450,445 600,420 Q750,395 900,420 Q1050,445 1200,420" />
+    <path d="M0,450 Q150,425 300,450 Q450,475 600,450 Q750,425 900,450 Q1050,475 1200,450" />
+  </g>
+
+  <!-- Noise texture overlay -->
+  <rect width="1200" height="630" filter="url(#noise)" opacity="0.04" />
+
+  <!-- Brand name -->
+  <text
+    x="600"
+    y="290"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="108"
+    font-weight="400"
+    fill="#1A1A1A"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    letter-spacing="-2"
+  >tinkertope</text>
+
+  <!-- Tagline -->
+  <text
+    x="600"
+    y="380"
+    font-family="'DM Sans', system-ui, sans-serif"
+    font-size="28"
+    font-weight="300"
+    fill="#A8763E"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    letter-spacing="1"
+  >The Future of Voice is Intelligent</text>
+</svg>
